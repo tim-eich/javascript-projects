@@ -50,5 +50,5 @@ if (astronautCount > 7) {
     console.log("Total Mass: " + totalMassKg + " kg");
     console.log("Fuel Temp: " + fuelTempCelsius + " ºC");
     console.log("Weather Status: " + weatherStatus);
-    console.log("GLHF!");
+    console.log("Launch is a go, GLHF!");
 }
