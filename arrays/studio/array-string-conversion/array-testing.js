@@ -23,9 +23,10 @@ function semiDash() {
 	let check = strings[1];
 	let output;
 //TODO: write the code required for this step
-	if (check.)
-  
-	return output;
+	if (check.includes(';')) {
+		output = check.split(';').sort().join('-');
+	}
+  	return output;
 }
 
 //4)
@@ -33,7 +34,9 @@ function reverseSpaces() {
 	let check = strings[2];
 	let output;
   //TODO: write the code required for this step
-
+	if (check.includes(' ')) {
+		output = check.split(' ').sort().reverse().join(' ');
+	}
 	return output;
 }
 
@@ -43,17 +46,24 @@ function commaSpace() {
 	let output;
 	//TODO: write the code required for this step
 	if (check.includes(', ')) {
-		output = check.split(',').reverse().join(',');
+		output = check.trim().split(', ').reverse().join(',');
 	}
 	return output;
 }
-console.log(reverseCommas())
+
+/*
+// Check output
+console.log(reverseCommas());
+console.log(semiDash());
+console.log(reverseSpaces());
 console.log(commaSpace());
+*/
+
+reverseSpaces : reverseSpaces,
 // NOTE: Don't add or modify any code below this line or your program might not run as expected.
 module.exports = {
 	strings : strings, 
 	reverseCommas : reverseCommas,
 	semiDash: semiDash, 
-	reverseSpaces : reverseSpaces,
 	commaSpace : commaSpace
 };
