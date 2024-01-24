@@ -3,8 +3,8 @@ const input = require('readline-sync');
 function makeLine(size, newChar) {
     let count = 1;
     let line = '';
-    let char = '#';
-    if (newChar) {
+    let char = '#';     // Default character
+    if (newChar) {      // Reassigns char to newChar if the argument was included, uses default otherise
         char = newChar;
     }
     while (count <= size) {
@@ -16,15 +16,24 @@ function makeLine(size, newChar) {
 
 // console.log(makeLine();
 
-function makeSquare(size) {
-    let square = makeLine(size);
-    for (let i = 0; i < size - 1; i++) {
-        square += '\n' + makeLine(size);
+function makeSquare(size, newChar) {
+    let square = '';
+    if (newChar) {  // if newChar present, it's passed to the makeLine function as an argument
+        square = makeLine(size, newChar);
+        for (let i = 0; i < size - 1; i++) {
+            square += '\n' + makeLine(size, newChar);
+        }
+        return square;
+    } else {
+        square = makeLine(size);
+        for (let i = 0; i < size - 1; i++) {
+            square += '\n' + makeLine(size);
+        }
+        return square
     }
-    return square;
 }
 
-// console.log(makeSquare(5));
+// console.log(makeSquare(5, '&'));
 
 function makeRectangle(width, height, newChar) {
     if (newChar) {
