@@ -73,6 +73,7 @@ function makeDiamond(height) {
     }
     // Invert 'triangle' and place it one below existing 'triangle', creating a diamond.
     let diamond = triangle + '\n' + triangle.split('').reverse().join('');
+    return diamond;
 }
 
-console.log(makeDiamond(6));
+console.log(makeDiamond(5));
