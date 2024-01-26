@@ -51,7 +51,9 @@ function completeReversal(arr) {
     return newArr;
 }
 
-console.log(completeReversal(arrayTest1));
+// console.log(completeReversal(arrayTest1));
+console.log(completeReversal(arrayTest2));
+// console.log(completeReversal(arrayTest3));
 
 // Bonus Missions
 
