@@ -117,8 +117,7 @@ function makeDiamond(height, newChar) {
         triangle = makeIsoscelesTriangle(height);
     }
     // Invert 'triangle' and place it one below existing 'triangle', creating a diamond.
-    let diamond = triangle + '\n' + triangle.split('').reverse().join('');
-    return diamond;
+    return triangle + '\n' + triangle.split('').reverse().join('');
 }
 
 // console.log(makeDiamond(5, '+'));
