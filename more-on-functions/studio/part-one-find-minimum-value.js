@@ -7,4 +7,16 @@ let nums3 = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 0];
 
 //Using one of the test arrays as the argument, call your function inside the console.log statement below.
 
-console.log(/* your code here */);
+function minVal(arr) {
+    let min = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+                min.push(arr[i]);
+            }
+        }
+    }
+    return min;
+}
+
+console.log(minVal(nums1));
