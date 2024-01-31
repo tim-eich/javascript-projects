@@ -4,8 +4,8 @@ let superChimpOne = {
    mass: 9,
    age: 6,
    astronautId: 1,
-   move: function (max) {
-      return Math.floor(Math.random() * max);
+   move: function () {
+      return Math.floor(Math.random() * 11);
    }
 };
 
@@ -15,8 +15,8 @@ let salamander = {
    mass: 0.1,
    age: 5,
    astronautId: 2,
-   move: function (max) {
-      return Math.floor(Math.random() * max);
+   move: function () {
+      return Math.floor(Math.random() * 11);
    }
 };
 
@@ -27,7 +27,7 @@ let superChimpTwo = {
    age: 6,
    astronautId: 3,
    move: function (max) {
-      return Math.floor(Math.random() * max);
+      return Math.floor(Math.random() * 11);
    }
 };
 
@@ -38,7 +38,7 @@ let dogOne = {
    age: 5,
    astronautId: 4,
    move: function (max) {
-      return Math.floor(Math.random() * max);
+      return Math.floor(Math.random() * 11);
    }
 };
 
@@ -49,7 +49,7 @@ let microOne = {
    age: 1,
    astronautId: 5,
    move: function (max) {
-      return Math.floor(Math.random() * max);
+      return Math.floor(Math.random() * 11);
    }
 };
 
@@ -83,8 +83,8 @@ function fitnessTest(arr) {
       while (steps < 20) {
          steps += arr[i].move(10);
          turns += 1;
-         // Check on loop:
-         // console.log(`On their ${turns} turn, ${arr[i].name} reached a total of ${steps} steps.`);
+         // // Check on loop:
+         console.log(`Name: ${arr[i].name}, Turn: ${turns}, Total Steps: ${steps}`);
       }
       raceResults.push(`${arr[i].name} took ${turns} turns to take 20 steps.`);
    }
