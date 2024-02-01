@@ -26,7 +26,7 @@ let superChimpTwo = {
    mass: 11,
    age: 6,
    astronautId: 3,
-   move: function (max) {
+   move: function () {
       return Math.floor(Math.random() * 11);
    }
 };
@@ -37,7 +37,7 @@ let dogOne = {
    mass: 14,
    age: 5,
    astronautId: 4,
-   move: function (max) {
+   move: function () {
       return Math.floor(Math.random() * 11);
    }
 };
@@ -48,7 +48,7 @@ let microOne = {
    mass: 0.0000000001,
    age: 1,
    astronautId: 5,
-   move: function (max) {
+   move: function () {
       return Math.floor(Math.random() * 11);
    }
 };
