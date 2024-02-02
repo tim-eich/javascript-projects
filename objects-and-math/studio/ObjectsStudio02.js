@@ -59,9 +59,10 @@ let candidateA = {
  };
  
  let crew = [candidateA,candidateC,candidateE];
+ let orbits = 5;
  let defaultOrbRadius = 2000;
  let defaultOrbSpeed = 28000;
  
  // console.log(orbitCircumference(2000));
 
- console.log(`The mission will travel ${orbitCircumference(defaultOrbRadius)} km around the planet, and it will take ${missionDuration(10, defaultOrbRadius, defaultOrbSpeed)} hours to complete.`)
+ console.log(`The mission will travel ${orbitCircumference(defaultOrbRadius) * orbits} km around the planet, and it will take ${missionDuration(orbits, defaultOrbRadius, defaultOrbSpeed)} hours to complete.`)
