@@ -5,7 +5,7 @@ function orbitCircumference(radInKm) {
 
 // Code your missionDuration function here:
 function missionDuration (orbsCompleted, orbRadius, orbSpeed) {
-  return Math.round((orbsCompleted * orbSpeed / orbitCircumference(orbRadius) * 100) / 100);
+  return Math.round((orbsCompleted * orbitCircumference(orbRadius)/orbSpeed)*100)/100;
 }
 
 // Copy/paste your selectRandomEntry function here:
