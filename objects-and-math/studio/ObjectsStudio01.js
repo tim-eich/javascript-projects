@@ -80,15 +80,7 @@ selectedCrew.push(selectRandomEntry(idNumbers));
 
 // Code your template literal and console.log statements:
 
-// console.log(selectRandomEntry(idNumbers));
-// console.log(idNumbers);
-// console.log(selectRandomEntry(idNumbers));
-// console.log(idNumbers);
-// console.log(selectRandomEntry(idNumbers));
-// console.log(idNumbers);
-
-// console.log(animals);
 
 let crew = buildCrewArray(animals, selectedCrew);
-console.log();
+
 console.log(`${crew[0].name}, ${crew[1].name}, and ${crew[2].name} are going to space!`);
