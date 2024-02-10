@@ -20,7 +20,7 @@ for (let i = 0; i<prompts.length; i++){
   if (response.toLowerCase()==='y'){
     if (i===0){
       //Call 'printAll' here and pass in all necessary arguments.
-      printAll.printAll(astronauts, testTitles, scores);
+      printAll(astronauts, testTitles, scores);
     } else if (i===1){
       for (let j = 0; j<testTitles.length; j++){
         //Call 'averageForTest' here. Pass in j and scores as arguments.
