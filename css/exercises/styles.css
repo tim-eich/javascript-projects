@@ -1,1 +1,29 @@
 /* Start adding your styling below! */ 
+body {
+    background: yellow;
+}
+
+p {
+    color: green;
+}
+
+#purplePower {
+    color: purple;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+}
+
+#cool-text {
+    color: blue;
+}
