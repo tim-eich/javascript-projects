@@ -1,13 +1,12 @@
 function gradeLabs(labs) {
   for (let i=0; i < labs.length; i++) {
-      let lab = labs[i];
-      let result;
-      try {
-        result = lab.runLab(3);
-      } catch(err) {
-        result = "Error thrown.";
-      }
-      console.log(`${lab.student} code worked: ${result === 27}`);
+    let lab = labs[i];
+    try {
+      console.log(lab.runLab(3));
+    } catch(err) {
+      console.log("Error thrown.");
+    }
+    // console.log(`${lab.student} code worked: ${result === 27}`);
   }
 }
 
@@ -21,7 +20,7 @@ let studentLabs = [
   {
       student: 'Erica',
       runLab: function (num) {
-        return num * num;
+        return Math.pow(num, num);
       }
   }
 ];
@@ -42,7 +41,7 @@ let studentLabs2 = [
   {
       student: 'Mya',
       runLab: function (num) {
-        return num * num;
+        return Math.pow(num, num);
       }
   }
 ];
