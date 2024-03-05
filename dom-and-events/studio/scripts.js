@@ -52,7 +52,7 @@ function init () {
             shuttlePosition.launched = false;
             shuttlePosition.height = 0;
             document.getElementById('flightStatus').innerHTML = "Mission aborted.";
-            document.getElementById('shuttleBackground').style.backgroundColor = 'green';
+            document.getElementById('shuttleBackground').style.backgroundColor = 'red';
             document.getElementById('spaceShuttleHeight').innerHTML = shuttlePosition.height;
             document.getElementById('rocket').style.bottom = '0px';
             document.getElementById('rocket').style.right = '0px';
