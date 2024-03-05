@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html>
    <head>
-    <title>Fetch Planets</title>
-    <script>
-        window.addEventListener("load", function() {
-        let json = [];
-        fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response){
+   <title>Fetch Planets</title>
+   <script>
+      window.addEventListener("load", function() {
+         let json = [];
+         fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
             response.json().then(function(json) {
-                console.log(json);
+               const destination = document.getElementById("destination");
+               let index = 0;
+               destination.addEventListener("click", function(){
+                  destination.innerHTML = `
+                  <div>
+                     <h3>Planet ${json[index].name}</h3>
+                     <img src=${json[index].image} height=250></img>
+                  </div>
+                  `;
+                  console.log(`index + 1: ${index + 1}`);
+                  console.log(`json.length: ${json.length}`);
+                  console.log(`index/json.length: ${index / json.length}`);
+                  console.log(`index % json.length: ${(index + 1) % json.length}`);
+                  index = (index + 1) % json.length;
+               });
             });
          });
-        const destination = document.getElementById("destination");
-        destination.innerHTML = `<h3>Planet ${json[0].name}</h3>`;
-        });
+      });
       </script>
    </head>
    <body>
